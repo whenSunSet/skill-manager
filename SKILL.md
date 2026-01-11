@@ -145,6 +145,7 @@ Utility scripts in `scripts/`:
 - **`install.sh`** - Install skill to Claude Code
 - **`commit-skill-changes.sh`** - Commit skill changes with proper messages
 - **`upload-to-github.sh`** - Upload skill to GitHub
+- **`generate-skills-hub-release.sh`** - Generate release post for claudecodeplugins.io Skills Hub
 ```
 
 ### Step 6: Validate the Skill
