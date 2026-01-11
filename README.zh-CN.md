@@ -1,5 +1,7 @@
 # Skill Manager - Claude Code Skill
 
+[English](README.md) | [中文版](README.zh-CN.md)
+
 > **完整的 Claude Code Skills 生命周期管理工具包——从创建、更新到发布和社区分享！**
 
 The complete toolkit for creating, publishing, and managing Claude Code Skills throughout their entire lifecycle.
