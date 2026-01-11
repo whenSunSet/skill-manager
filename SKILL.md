@@ -6,7 +6,21 @@ version: 1.0.0
 
 # Skill Manager Guide
 
-This skill provides comprehensive guidance for managing the complete lifecycle of Claude Code skills—from creation and updates to publishing and community sharing. Skills are modular, self-contained packages that extend Claude's capabilities with specialized knowledge, workflows, and tools.
+This skill provides comprehensive guidance for managing the complete lifecycle of Claude Code skills—from creation and updates to publishing and community sharing. **It actively helps you publish your skills to the community**, including automated GitHub publishing, Skills Hub announcements, and claude-plugins.dev optimization.
+
+Skills are modular, self-contained packages that extend Claude's capabilities with specialized knowledge, workflows, and tools.
+
+## Key Feature: Community Publishing
+
+Skill Manager goes beyond guidance—it **actively assists with publishing**:
+
+- **Automated GitHub publishing** - Initializes git, creates commits, and pushes to GitHub
+- **Skills Hub announcements** - Generates ready-to-post release announcements for Discord and GitHub Discussions
+- **README optimization** - Creates discoverable READMEs for claude-plugins.dev indexing
+- **Topic management** - Suggests proper GitHub topics for maximum visibility
+- **Complete workflow** - From local development to community sharing in one streamlined process
+
+When you're ready to publish, just say: *"Help me publish this skill to the community"* and Skill Manager will guide you through the entire process.
 
 ## What is a Skill?
 
