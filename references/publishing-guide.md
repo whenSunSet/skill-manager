@@ -4,14 +4,233 @@ This guide provides comprehensive information about publishing your Claude Code 
 
 ## Table of Contents
 
-1. [Understanding claude-plugins.dev](#understanding-claude-pluginsdev)
-2. [Pre-Publication Checklist](#pre-publication-checklist)
-3. [Creating an Optimized README](#creating-an-optimized-readme)
-4. [GitHub Repository Optimization](#github-repository-optimization)
-5. [Publication Workflow](#publication-workflow)
-6. [Post-Publication Strategy](#post-publication-strategy)
-7. [Troubleshooting Discovery Issues](#troubleshooting-discovery-issues)
-8. [Advanced Techniques](#advanced-techniques)
+1. [Understanding Publishing Platforms](#understanding-publishing-platforms)
+2. [Publishing to claudecodeplugins.io Skills Hub](#publishing-to-claudecodepluginsio-skills-hub)
+3. [Publishing to claude-plugins.dev](#publishing-to-claude-pluginsdev)
+4. [Pre-Publication Checklist](#pre-publication-checklist)
+5. [Creating an Optimized README](#creating-an-optimized-readme)
+6. [GitHub Repository Optimization](#github-repository-optimization)
+7. [Publication Workflow](#publication-workflow)
+8. [Post-Publication Strategy](#post-publication-strategy)
+9. [Troubleshooting Discovery Issues](#troubleshooting-discovery-issues)
+10. [Advanced Techniques](#advanced-techniques)
+
+## Understanding Publishing Platforms
+
+Claude Code skills can be published on multiple platforms, each with different advantages:
+
+### Platform Comparison
+
+| Platform | Type | Indexing | Engagement | Best For |
+|----------|------|----------|------------|----------|
+| **claudecodeplugins.io** | Community hub | Manual posting | High (direct) | Initial launch, feedback, community building |
+| **claude-plugins.dev** | Directory | Automatic | Passive | Long-term discoverability, SEO |
+
+### Recommended Strategy
+
+**For maximum visibility, publish to both platforms:**
+
+1. **Start with claudecodeplugins.io Skills Hub**
+   - Post your release announcement
+   - Get immediate feedback from community
+   - Refine your skill based on responses
+
+2. **Ensure visibility on claude-plugins.dev**
+   - Set up GitHub repository properly
+   - Add correct topics and optimize README
+   - Let automatic indexing handle discovery
+
+## Publishing to claudecodeplugins.io Skills Hub
+
+**claudecodeplugins.io** (Skills Hub) is the community-driven platform where developers share and discover Claude Code skills through direct engagement.
+
+### How It Works
+
+Unlike automated directories, Skills Hub requires manual posting but offers:
+
+- **Direct community engagement**: Get immediate feedback
+- **Curated discovery**: Skills are reviewed by community members
+- **Active discussion**: Q&A, feature requests, and improvements
+- **Real feedback**: Learn what users actually want
+
+### Where to Post
+
+#### Option 1: Discord
+
+1. **Join the Claude Code community Discord**
+   - Find the invite link on claudecodeplugins.io
+   - Join the server
+
+2. **Locate the release channel**
+   - Look for `#new-skill-release` or similar
+   - Read channel rules and pinned messages
+
+3. **Post your announcement**
+   - Use the template below
+   - Include all required information
+   - Engage with responses
+
+#### Option 2: GitHub Discussions
+
+1. **Visit claudecodeplugins.io repository**
+   - Go to: https://github.com/anthropics/claudecodeplugins.io
+   - (or the appropriate community repo)
+
+2. **Start a new discussion**
+   - Click "Discussions" tab
+   - Select "New Skill Release" category
+   - Fill in the template
+
+### Release Post Template
+
+**Community preference**: Skills Hub favors **composable tool-type skills** over large, comprehensive agents. Keep your skill focused and specific.
+
+```markdown
+Title: [Skill Release] [Skill Name] – [One-line description]
+
+What it does:
+- [Brief explanation of core functionality]
+- [Key feature 1 - specific]
+- [Key feature 2 - specific]
+- [What problem it solves]
+
+Why useful:
+- [Specific use case 1]
+- [Specific use case 2]
+- [Who benefits from this skill]
+- [Why it's better than alternatives]
+
+Example usage:
+- "Say: [trigger phrase 1]"
+- "Say: [trigger phrase 2]"
+- "Say: [trigger phrase 3]"
+
+Repo:
+- https://github.com/username/skill-name
+
+Tags:
+- [relevant-tag-1], [relevant-tag-2], [relevant-tag-3]
+```
+
+### Complete Example
+
+```markdown
+Title: [Skill Release] API Request Builder – Construct HTTP requests with natural language
+
+What it does:
+- Generate curl commands and HTTP requests from natural language
+- Support for all HTTP methods (GET, POST, PUT, DELETE, etc.)
+- Automatic header and body formatting
+- Works with any API endpoint
+
+Why useful:
+- Quickly test APIs without memorizing curl syntax
+- Document API calls in plain English
+- Share requests with team members easily
+- Perfect for API exploration and debugging
+
+Example usage:
+- "Send a POST request to https://api.example.com/users with name: John"
+- "Create a GET request with Authorization header"
+- "Build a request to update user ID 123"
+
+Repo:
+- https://github.com/username/api-request-builder
+
+Tags:
+- api, http, curl, testing, debugging
+```
+
+### Best Practices
+
+#### ✅ DO:
+
+- **Focus on composable tools**: Small, focused skills that do one thing well
+- **Be specific**: Clearly explain what the skill does in concrete terms
+- **Show examples**: Provide actual trigger phrases users can say
+- **Include repo link**: Always include the GitHub repository URL
+- **Add relevant tags**: Help others discover your skill through categories
+- **Respond to feedback**: Engage with comments within 24 hours
+- **Be honest**: Transparent about limitations and edge cases
+- **Show, don't tell**: Include screenshots, GIFs, or demo videos if possible
+
+#### ❌ DON'T:
+
+- **Post large agents**: Comprehensive agent systems are less favored
+- **Be vague**: "A helpful skill" tells nothing
+- **Skip the repo link**: Users need to see the code
+- **Forget triggers**: How do users actually invoke the skill?
+- **Ignore community**: Don't post and disappear
+- **Over-hype**: Be realistic about capabilities
+- **Spam**: One announcement is sufficient
+
+### Using the Generator Script
+
+skill-manager includes a script to generate your release post automatically:
+
+```bash
+# Navigate to skill-manager
+cd ~/.claude/skills/skill-manager
+
+# Run the generator
+./scripts/generate-skills-hub-release.sh /path/to/your-skill
+
+# Copy the output and post to Discord or GitHub Discussions
+```
+
+The script will:
+- Extract skill name and description from SKILL.md
+- Detect GitHub repository URL
+- Generate properly formatted release post
+- Provide posting instructions
+
+### Tips for Maximum Impact
+
+1. **Timing matters**
+   - Post weekday mornings (US/EU timezone overlap)
+   - Avoid weekends and holidays
+   - Check when community is most active
+
+2. **Visuals help**
+   - Include screenshots of the skill in action
+   - Create short demo GIFs (under 15 seconds)
+   - Show before/after if applicable
+
+3. **Keep it focused**
+   - One clear use case
+   - Specific problem solved
+   - Concrete examples
+
+4. **Engagement strategy**
+   - Monitor replies for first 48 hours
+   - Answer every question
+   - Clarify misunderstandings
+   - Thank early adopters
+
+5. **Iterate and improve**
+   - Update skill based on feedback
+   - Post updates in the same thread
+   - Document changes in README
+
+### After Publishing
+
+**First 24 hours:**
+- Respond to all comments
+- Clarify any confusion
+- Fix critical bugs if found
+- Thank early feedback
+
+**First week:**
+- Implement quick improvements
+- Share usage statistics
+- Highlight community contributions
+- Consider writing a blog post
+
+**Ongoing:**
+- Monitor for issues in your GitHub repo
+- Update skill with new features
+- Share major updates back to Skills Hub
+- Help other skill authors
 
 ## Understanding claude-plugins.dev
 

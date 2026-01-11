@@ -476,6 +476,140 @@ cc plugin uninstall plugin-name
 
 ## Publishing and Distribution
 
+### Publishing to claudecodeplugins.io Skills Hub
+
+**claudecodeplugins.io** (Skills Hub) is the community-driven platform for discovering and sharing Claude Code skills. Unlike the automated indexing of claude-plugins.dev, this platform requires manual posting but offers direct community engagement.
+
+#### How It Works
+
+- **Manual submission**: Post release announcements yourself
+- **Community-driven**: Active community feedback and discussion
+- **Curated discovery**: Skills are reviewed and featured
+- **Direct engagement**: Interact directly with users and developers
+
+#### Where to Post
+
+**Choose one or both platforms:**
+
+1. **Discord**
+   - Join the Claude Code community Discord
+   - Find the "New Skill Release" channel or similar
+   - Post your skill announcement
+
+2. **GitHub Discussions**
+   - Go to the claudecodeplugins.io repository
+   - Start a new discussion in "New Skill Release" category
+   - Fill in the required information
+
+#### Release Post Template
+
+**Community preference**: They favor "composable tool-type skills" over large, comprehensive agents.
+
+**Use this template:**
+
+```markdown
+Title: [Skill Release] [Skill Name] – [One-line description of what it does]
+
+What it does:
+- [Brief explanation of the core functionality]
+- [Key feature 1]
+- [Key feature 2]
+- [What problem it solves]
+
+Why useful:
+- [Specific use case 1]
+- [Specific use case 2]
+- [Who benefits from this skill]
+- [Why it's better than alternatives]
+
+Example usage:
+- "Say: [trigger phrase 1]"
+- "Say: [trigger phrase 2]"
+- "Say: [trigger phrase 3]"
+
+Repo:
+- https://github.com/username/skill-name
+
+Tags:
+- [relevant-tag-1], [relevant-tag-2]
+```
+
+#### Best Practices for Skills Hub
+
+✅ **DO:**
+- Focus on **composable, tool-type skills**
+- Keep descriptions concise and specific
+- Provide concrete usage examples
+- Mention trigger phrases clearly
+- Include GitHub repo link
+- Add relevant tags
+- Respond to comments and feedback
+- Show, don't just tell (screenshots, demos)
+
+❌ **DON'T:**
+- Post large, comprehensive agent systems
+- Write vague descriptions
+- Omit the GitHub link
+- Forget trigger phrases
+- Ignore community feedback
+- Over-promote or spam
+
+#### Example Post
+
+```markdown
+Title: [Skill Release] Code Visualizer – Transform code into Mermaid diagrams
+
+What it does:
+- Automatically generates Mermaid flowcharts from code
+- Visualizes function calls, class hierarchies, and data flow
+- Works with any programming language Claude understands
+- Creates publication-ready diagrams
+
+Why useful:
+- Quickly understand legacy code architecture
+- Document systems without manual diagramming
+- Explain complex logic to teams visually
+- Perfect for code reviews and onboarding
+
+Example usage:
+- "Visualize the authentication flow in this code"
+- "Create a class diagram for these React components"
+- "Show me the data flow in this API"
+
+Repo:
+- https://github.com/username/code-visualizer
+
+Tags:
+- visualization, diagrams, mermaid, documentation
+```
+
+#### Quick Workflow
+
+To post to Skills Hub:
+
+```bash
+# 1. Ensure your skill is on GitHub
+git push origin main
+
+# 2. Generate release post using the script
+cd ~/.claude/skills/skill-manager/
+./scripts/generate-skills-hub-release.sh /path/to/your-skill
+
+# 3. Copy the output and post to:
+#    - Discord #new-skill-release channel
+#    - GitHub Discussions in claudecodeplugins.io repo
+
+# 4. Engage with comments and feedback!
+```
+
+#### Tips for Maximum Impact
+
+1. **Timing**: Post when community is active (weekday mornings)
+2. **Visuals**: Include screenshots or GIFs if possible
+3. **Simplicity**: Focus on one clear use case
+4. **Honesty**: Be transparent about limitations
+5. **Engagement**: Respond to every comment within 24 hours
+
 ### Publishing to claude-plugins.dev
 
 **claude-plugins.dev** is the primary discovery platform for Claude Code plugins and skills. Follow these guidelines to maximize visibility.
